@@ -1,0 +1,25 @@
+* {
+  background-color: darkgray;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.flagContainer {
+  display: grid;
+  height: 160px;
+}
+
+.columnContainer {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.rowContainer {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.circle {
+  border-radius: 50%;
+}
