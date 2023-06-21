@@ -44,7 +44,7 @@ export default [
     orientation: 'horizontal',
     lines: [
       {colorId: 1, color: 'cyan'},
-      {colorId: 2, color: 'white', circle: {color: 'yellow', size: '30px'} },
+      {colorId: 2, color: 'white', circle: {color: 'yellow', size: '40px'} },
       {colorId: 3, color: 'cyan'}
     ]
   }

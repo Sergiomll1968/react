@@ -20,6 +20,14 @@
   grid-auto-flow: column;
 }
 
+.circleContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .circle {
+  margin-top: -15px;
+  margin-bottom: -15px;
   border-radius: 50%;
 }
