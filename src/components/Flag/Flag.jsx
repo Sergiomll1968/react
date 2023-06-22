@@ -22,4 +22,3 @@ function Flag(props) {
 
 export default Flag;
 
-// {line.circle && <div className='circle' style={{backgroundColor: line.circle.color, height: line.circle.size, width: line.circle.size}}></div>}

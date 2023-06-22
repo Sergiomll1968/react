@@ -1,6 +1,6 @@
-import './FlagsApp.css';
+import './Flags.css';
 import flagsDB from './flagsDB.js';
-import Flag from './components/Flag/Flag.jsx';
+import Flag from '../../components/Flag/Flag.jsx';
 
 function FlagsApp() {
 
