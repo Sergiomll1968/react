@@ -6,10 +6,20 @@ import Bookings from './pages/Bookings/Bookings.jsx';
 import Booking from './pages/Booking/Booking.jsx';
 import Calc from './pages/Calc/Calc.jsx';
 import WheelOfFortune from './pages/WheelOfFortune/WheelOfFortune.jsx';
+import Bootstrap from "./pages/Bootstrap/Bootstrap.jsx";
+import TicTacToe from "./pages/TicTacToe/TicTacToe.jsx";
 
 function AppRouter() {
   return useRoutes(
     [
+      {
+        element: <TicTacToe />,
+        path: '/tictactoe',
+      },
+      {
+        element: <Bootstrap />,
+        path: '/bootstrap',
+      },
       {
         element: <App />,
         path: '/',
