@@ -46,7 +46,7 @@ function AppRouter() {
       },
       {
         element: <WheelOfFortune />,
-        path: '/WheelOfFortune',
+        path: '/wheeloffortune',
       },
     ]
   )

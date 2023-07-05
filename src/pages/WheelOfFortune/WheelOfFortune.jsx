@@ -1,6 +1,7 @@
 import './WheelOfFortune.css';
 import { useState, useEffect } from 'react';
-import logo from '../../images/logo.png';
+import winGif from '../../images/win.gif';
+import loseGif from '../../images/lose.gif';
 
 
 function WheelOfFortune() {
@@ -125,41 +126,31 @@ function WheelOfFortune() {
       {
         isGameFinished && (film === inputTextPlaceholder) ?
 
-        <div>
-
-          <div className="row m-2">
-            <div className="display-2 col-12 col-sm-12 col-md-12 d-flex justify-content-center p-3 text-info">¡¡¡ Enhorabuena, has ganado !!!</div>
-            <div><img src={logo}></img></div>
-          </div>
-          <div className="row m-2">
-          <div className='w3-display-container w3-display-middle'>
-            <h1 className='w3-text-teal'>
-              <b>¡¡¡ Enhorabuena, has ganado !!!</b>
-            </h1>
-            <br />
-            <div className='w3-display-container'>
-            <div className='w3-container w3-center'>
-              <div style={{width:'480px'}}><iframe allow={"fullscreen"} frameBorder="0" height="270" src="https://giphy.com/embed/MtGY4FcgMmgzFXSXca/video" width="480"></iframe></div>
-            </div>
+          <div>
+            <div className="row m-2">
+              <div className='w3-display-container w3-display-middle'>
+                <h1 className='w3-text-teal'>
+                  <b>¡¡¡ Enhorabuena, has ganado !!!</b>
+                </h1>
+                <br />
+                  <iframe allow={"fullscreen"}  height="270" src={winGif} width="480"></iframe>
+              </div>
             </div>
           </div>
-          </div>
 
-        </div>
-
-          :
+        :
           
           isGameFinished &&
           
-          <div className='w3-display-container w3-display-middle'>
-            <h1 className='w3-text-teal'>
-              <b>¡¡¡ Lo siento, has perdido !!!</b>
-            </h1>
-            <br />
-            <div className='w3-display-container'>
-            <div className='w3-container w3-center'>
-              <div style={{width:'480px'}}><iframe allow={"fullscreen"} frameBorder="0" height="270" src="https://giphy.com/embed/vMmnJti6wQPDy" width="480"></iframe></div>
-            </div>
+          <div>
+            <div className="row m-2">
+              <div className='w3-display-container w3-display-middle'>
+                <h1 className='w3-text-teal'>
+                  <b>¡¡¡ Lo siento, has perdido !!!</b>
+                </h1>
+                <br />
+                  <iframe allow={"fullscreen"}  height="270" src={loseGif} width="480"></iframe>
+              </div>
             </div>
           </div>
       }

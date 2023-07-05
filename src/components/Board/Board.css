@@ -6,3 +6,22 @@
 .highlightSquare {
   background-color: coral;
 }
+
+.redSquare {
+  width: 80%;
+  height: 80%;
+  background-color: red;
+}
+
+.blueCircle {
+  width: 80%;
+  height: 80%;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.square {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}
