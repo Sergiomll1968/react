@@ -1,5 +1,5 @@
-import StyledButton from '../../components/StyledButton/StyledButton.jsx';
-import Modal from '../../components/Modal/Modal.jsx';
+import StyledButton from '../../components/StyledButton/StyledButton.js';
+import StyledModal from '../../components/StyledModal/StyledModal.js';
 
 import './Board.css';
 import { useState, useEffect } from "react";
@@ -21,6 +21,7 @@ export default function Board() {
   const [gameFinished, setGameFinished] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState();
 
   useEffect(() => {
     
@@ -36,12 +37,12 @@ export default function Board() {
           setGameInfo({message1: 'Empate', message2: 'No gana nadie'});
         }
         setGameFinished(true);
-        setShowModal(true);
+        setModalMessage('Reiniciar juego');
       } else {
         if (winner) {
           setGameInfo({message1: 'Gana', message2: isFirstPlayerTurn});
           setGameFinished(true);
-          setShowModal(true);
+          setModalMessage('Reiniciar juego');
         } else {
           setIsfirstPlayerTurn(!isFirstPlayerTurn);
           setGameInfo({message1: 'Turno de', message2: isFirstPlayerTurn ? 'O': 'X'});
@@ -85,7 +86,9 @@ export default function Board() {
   function onClickHandler(idx) {
     if (!gameFinished) {
       if (board[idx]) {
-        alert('Casilla ocupada');
+        setShowModal(true);
+        setTimeout(() => {setShowModal(false)}, 2000);
+        setModalMessage('Casilla ocupada.');
       return;
       }
       let tempBoard = [...board];
@@ -94,7 +97,7 @@ export default function Board() {
     }
   }
 
-  function onClickResetGame() {
+  function onClickModal() {
     setBoard(initialBoard);
     setIsfirstPlayerTurn(true);
     setGameInfo(initialGameInfo);
@@ -124,15 +127,17 @@ export default function Board() {
 
       <div className="d-flex justify-content-center">
         
-        { gameFinished && showModal &&
+        { (gameFinished || showModal) &&
 
-          <>
+              <StyledModal onClick={() => gameFinished && onClickModal()} className='d-flex align-items-center'>
+                <StyledButton
+                  onClick={() => gameFinished && onClickModal()}
+                  className="col-4 d-flex justify-content-center align-items-center p-3"
+                  $highlight='white'>
+                  {modalMessage}
+                </StyledButton>
+              </StyledModal>
 
-            <div>
-              <Modal resetGame={onClickResetGame}></Modal>
-            </div>
-
-          </>
         }
 
       </div>

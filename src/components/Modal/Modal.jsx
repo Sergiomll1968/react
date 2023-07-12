@@ -1,12 +1,12 @@
 import './Modal.css';
-import StyledButton from '../../components/StyledButton/StyledButton.jsx';
+import StyledButton from '../../components/StyledButton/StyledButton.js';
 
 function Modal({resetGame}) {
   return (
     <>
       <div
         className='layer d-flex align-items-center'
-        onClick={() => resetGame()}
+        onClick={resetGame}
       >
         <StyledButton
           onClick={() => resetGame()}

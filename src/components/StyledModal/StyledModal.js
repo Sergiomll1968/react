@@ -1,4 +1,6 @@
-.layer {
+import styled from 'styled-components';
+
+const StyledModal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +11,7 @@
   height: 100vh;
   z-index: 100;
   opacity: 0.8;
-  background-color: rgb(150, 143, 143);
-}
+  background-color: rgb(150, 143, 143);    
+`;
+
+export default StyledModal;

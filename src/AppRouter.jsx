@@ -8,10 +8,15 @@ import Calc from './pages/Calc/Calc.jsx';
 import WheelOfFortune from './pages/WheelOfFortune/WheelOfFortune.jsx';
 import Bootstrap from "./pages/Bootstrap/Bootstrap.jsx";
 import TicTacToe from "./pages/TicTacToe/TicTacToe.jsx";
+import UseAPIRequest from "./pages/UseAPIRequest/UseAPIRequest.jsx";
 
 function AppRouter() {
   return useRoutes(
     [
+      {
+        element: <UseAPIRequest />,
+        path: '/useAPIRequest',
+      },
       {
         element: <TicTacToe />,
         path: '/tictactoe',
