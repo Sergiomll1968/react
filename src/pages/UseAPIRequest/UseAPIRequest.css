@@ -14,8 +14,12 @@ th, span {
 }
 
 tbody>tr:nth-child(odd) {
-  color: rgb(84, 231, 158);
-  background-color: rgb(243, 145, 115);
+  color: rgb(193, 95, 4);
+  background-color: rgb(187, 237, 69);
+}
+
+tbody>tr:nth-child(odd)>td {
+  background-color: rgb(187, 237, 69);
 }
 
 .styledArrow {
